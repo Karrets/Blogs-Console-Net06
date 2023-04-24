@@ -14,6 +14,15 @@ public class BloggingContext : DbContext
         this.SaveChanges();
     }
 
+    public void AddPost(Blog blog, Post post) {
+        post.BlogId = blog.BlogId;
+        post.Blog = blog;
+        Posts.Add(post);
+        blog.Posts.Add(post);
+
+        SaveChanges();
+    }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         var configuration =  new ConfigurationBuilder()
