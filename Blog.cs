@@ -1,3 +1,5 @@
+namespace Blogs_Console; 
+
 public class Blog
 {
     public int BlogId { get; set; }

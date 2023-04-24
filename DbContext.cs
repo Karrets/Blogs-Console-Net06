@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
+
+namespace Blogs_Console; 
 
 public class BloggingContext : DbContext
 {
